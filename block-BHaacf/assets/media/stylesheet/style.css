@@ -1,0 +1,521 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*******************************Some generic classes***********************************/
+*,
+*::before,
+*::after{
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+.flex-space-between{
+    display: flex;
+    justify-content: space-between;
+}
+.align-center{
+    justify-content: center;
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+:root{
+    --white: #ffffff;
+    --orange: #ED563A;
+    --gray:rgba(197,184,184,1);
+}
+.overlay{
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+body{
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.flex{
+    display: flex;
+}
+
+.flex-50{
+    flex: 0 1 50%;
+}
+.flex-30{
+    flex: 0 1 30%;
+}
+.flex-70{
+    flex: 0 1 60%;
+}
+.flex-100{
+    flex: 0 1 100%;
+}
+.flex-end{
+    justify-content: flex-end;
+}
+.direction-coloumn{
+    flex-direction: column;
+}
+.btn{
+    background-color: var(--orange);
+    
+}
+button{
+    padding: 12px;
+    font-weight: bold;
+    color:var(--gray);
+    background-color: var(--orange);
+    border: 0;
+    font-size: 10px;
+}
+.margin-5{
+    margin: 5px 0;
+}
+.margin-10{
+    margin: 20px 0;
+}
+.margin-right{
+    margin-right: 10px;
+}
+.margin-left{
+    margin-left: 10px;
+}
+.padding{
+    padding: 10px;
+}
+.span{
+    color: var(--orange);
+}
+.dumbull{
+    color: var(--white);
+    border: 1px solid black;
+    background-color: var(--gray);
+    padding: 25px;
+    border-radius: 5px;
+}
+figure{
+    align-self: center;
+}
+.know-more{
+    margin-top: 10px;
+}
+.aside-small-box{
+    border: 1px solid gray;
+}
+/**************************************Custom styles*********************************/
+
+
+.header{
+   
+    background-color: rgba(97, 95, 95, 0.4);
+    padding: 20px 0;
+    position: relative;
+}
+.background-vdo{
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+}
+.background-vdo video{
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+}
+.overlay-vdo{
+    position: relative;
+    
+}
+
+h1{
+    font-size: 20px;
+    color: var(--white);
+    font-weight: bold;
+}
+h1 span{
+    color: var(--orange);
+}
+.nav-list li a{
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--gray);
+   margin-left: 20px;
+   margin-right: 20px;
+    padding: 10px 0;
+}
+
+.nav-list .active a{
+    color: var(--orange);
+}
+.header-btn{
+    
+    
+}
+ul .header-btn a{
+    color: var(--white);
+}
+.main-heading{  
+    vertical-align: middle;
+    margin: auto 0;
+   padding: 300px 0 500px 0;
+}
+.main-heading h2,h3{
+    font-size: 12px;
+    color: var(--white);
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.main-heading h3{
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.main-heading h3 span{
+    color: var(--orange);
+}
+button{
+    padding: 12px;
+    font-weight: bold;
+    color:var(--gray);
+    background-color: var(--orange);
+    border: 0;
+    font-size: 10px;
+}
+/*******************program section*********************/
+.program-headings h2{
+ font-weight: bold;
+}
+.program-headings p{
+    font-size: 10px;
+    color: var(--gray);
+    margin-top: 0;
+}
+.know-more-heading h2{
+font-size: 12px;
+font-weight: bold;
+}
+.know-more-heading p{
+    font-size: 10px;
+    margin-top: 10px;
+    color: var(--gray);
+}
+.know-more-heading h3{
+    color:var(--orange);
+    font-size: 11px;
+}
+/***********************section membership****************************/
+.membership{
+    background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/cta-bg.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+   
+   background-size: cover;
+}
+.membership h2{
+    font-size: 25px;
+    color: var(--white);
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 20px 0 0 0;
+}
+.membership p{
+    font-size: 10px;
+    color: var(--gray);
+    margin-top: 10px;
+}
+.membership-headings{
+    padding: 100px 0;
+}
+.classes-headings h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+.classes-headings p{
+    font-size: 10px;
+    color: var(--gray);
+}
+.classes-headings{
+    padding: 80px 0;
+}
+
+/******************aside col*****************************/
+.aside-small-box{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 22px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 15px 1px var(--gray);
+    border: 0;
+    border-radius: 5px;
+   
+    
+}
+.aside-small-box img{
+    width: 20px;
+    margin-right: 10px;
+    align-items: baseline;
+}
+.aside-small-box:hover{
+    color: var(--orange);
+}
+.aside-last-button{
+    background-color: var(--orange);
+    color: var(--white);
+}
+.aside-last-button h2{
+    margin-left: 60px;
+    letter-spacing: 1px;
+   
+
+}
+.aside-last-button{
+    padding: 15px 0;
+    box-shadow: unset;
+}
+article{
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+}
+article img{
+    border-radius: 10px;
+    width: 510px;
+}
+article h2{
+    font-size: 18px;
+    font-weight: bold;
+
+}
+article p{
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 5px;
+}
+article button{
+    font-size: 10px;
+    font-weight: unset;
+    
+    
+}
+/********************Table section********************************/
+.table{
+    background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(../images/schedule-bg.jpg);
+    margin-top: 80px;
+    color: var(--white);
+    padding-bottom: 40px;
+   
+}
+.shedule{
+    text-align: center;
+    color: var(--white);
+    padding: 100px 0 30px 0;
+}
+.shedule img{
+    margin: 10px 0;
+}
+.shedule h2{
+    font-size: 17px;
+    font-weight: bold;
+}
+.shedule p{
+    color: var(--gray);
+    font-size: 10px;
+}
+caption{
+   font-size: 12px;
+   color: var(--gray);
+   margin: 20px 0;
+   word-spacing: 5px;
+   
+ 
+}
+table{
+    border: 1px solid var(--gray);
+    text-align: center;
+    margin: 20px auto;
+   
+
+}
+tr ,th, td{
+    border: 1px solid var(--gray);
+    padding: 25px;
+    font-size: 10px;
+    color: var(--gray);
+
+}
+/**********************Trainer class******************************/
+.trainer-heading{
+    padding: 80px 0 50px 0;
+}
+.trainer-heading h2{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+.trainer-heading p{
+    font-size: 10px;
+    color: var(--gray);
+}
+
+/***********************col***********************************/
+.trainers .col-1 h2{
+    font-size: 12px;
+    margin-top: 10px;
+}
+name{
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+}
+.trainers .col-1{
+   flex: 0 1 30%;
+    box-shadow: 1px 1px 15px 1px var(--gray);
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+.trainers .col-1 p{
+    font-size: 12px;
+    color: var(--gray);
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.trainers .social-nav ul li a{
+    font-size: 12px;
+    color: black;
+    margin-right: 10px;
+}
+.trainers .col{
+    padding-bottom: 50px;
+}
+/*************************contact section*******************************/
+.contact{
+   
+  padding: 40px 0 0 0;
+   
+  
+}
+.contact .map{
+   
+    border: 1px solid skyblue;
+    font-size: 0;
+    background-color: skyblue;
+}
+.contact .map iframe{
+    width:  100%;
+    padding: 0;
+    height: 100%;
+   
+    
+    
+}
+.contact .contact-col{
+   
+    font-size: 0;
+}
+.contact .contact-col img{
+    
+   width: 100%;
+   height: 100%;
+
+
+}
+/************form********************/
+form{
+    width: 30%;
+    border: 2px solid black;
+    padding: 30px;
+}
+
+.form-control{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+    padding-left: 5px;
+    border: 1px solid var(--gray);
+    outline: none;
+   
+
+}
+
+
+
+
+
+
+
+
+
+
+/*****************footer ******************/
+footer h2{
+    font-size: 12px;
+    color: var(--gray);
+    padding: 30px 0;
+    margin: 30px 0;
+}
+
